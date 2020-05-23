@@ -1,13 +1,16 @@
-import string
-import random
-from datetime import datetime
-
+try:
+  import string
+  import secrets
+  from datetime import datetime
+except ImportError:
+	print("Required Modules Not Found!")
+	exit(1)
 
 print("Enter number of characters for password,website name and id or username")
 
 def randompassword():
     chars=string.ascii_uppercase + string.ascii_lowercase + string.digits+string.punctuation
-    return''.join(random.choice(chars) for x in range(0,int(input())))
+    return''.join(secrets.choice(chars) for x in range(0,int(input())))
     
     
 
