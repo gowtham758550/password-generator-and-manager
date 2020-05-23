@@ -1,12 +1,21 @@
 # password-generator
-A simple password generator using python
+A simple password generator using python.
 
+Librariess required for this program:
+  1. pyAesCrypt(requires manual installation pip install pyAesCrypt)
+  2. getpass
+  3. os
+  4. binascii
+  5. string
+  6. re
+  7. secrets
 
-The user need to give number of characters for password,website name and username.
+This python program create password and store it in encrypted file and the file cannot opened by any editor. 
 
-Then password, username, website name, date and time also stored in a text file named password.txt. In this python file i just give the location as C: you can change the location and the file name.
+This tool has an additional feature and it is Master password for access all other passworda. The master password also stores in a encrypted file when you created a master password. Once the file is created you can generate and fetch passwords.
 
-To change the file path go to the 17th line of the code.
+If you are going to reset your machine don't worry about that just back up the files created by this tool. And restore the files in the same folder where thebsource code is then run the program it will run asusual. 
+
 
 
 Thank you😁
