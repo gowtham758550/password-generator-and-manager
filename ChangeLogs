@@ -1,3 +1,8 @@
 04/04/2020
 
 Generate passwords and stores it in a text file(no encryption).
+
+
+23/05/2020
+
+Generate password and stores it in a file with master password and file encryption. And no one open the encrypted file without your master password.
