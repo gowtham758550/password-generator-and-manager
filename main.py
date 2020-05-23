@@ -1,11 +1,15 @@
-import pyAesCrypt
-import getpass
-import os
-import binascii
-import string
-import re
-import secrets
-
+try:
+ import pyAesCrypt
+ import getpass
+ import os
+ import binascii
+ import string
+ import re
+ import secrets
+except ImportError:
+	print('Critical Modules Not Found!\nPress any key to continue...')
+	x=input()
+	exit(1)
 
 print("********************____PASSWORD MANAGER____********************\n\n")
 while(True):
@@ -68,7 +72,7 @@ while(True):
 					print("\nPassword Fetched : ",fetch_pass)
 				os.remove("null.txt")			
 		else:
-			print("**********Incoreect password**********")
+			print("**********Incorrect password**********")
 		break
 	
 	else:
