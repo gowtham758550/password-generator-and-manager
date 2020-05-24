@@ -14,7 +14,7 @@ except ImportError:
 print("********************____PASSWORD MANAGER____********************\n\n")
 while(True):
 	if os.path.isfile("mp.txt.aes"):
-		print("\nYour master password created\nUse this password to access this tool\n\n*note : While you type in password fields, passwords are not printed on the screen for security purpose don't worry about it")
+		print("\n\n*note : While you type in password fields, passwords are not printed on the screen for security purpose don't worry about it")
 		master_password = getpass.getpass("Enter your password : ")
 		with open("pass.txt") as file:
 			temp_str = ""
@@ -103,6 +103,7 @@ while(True):
 			FileOut.close()
 		FileIn.close()
 		os.remove("mp.txt")
+                print("your master password created you can use the password to use this tool :)")
 			
 			
 		
