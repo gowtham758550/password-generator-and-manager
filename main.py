@@ -53,6 +53,9 @@ while(True):
 					FileOut.close()
 				FileIn.close()
 				os.remove("null.txt")
+                                print("press any key to exit")
+                                x = input()
+                                exit(1)
 			elif choice == 2:
 				website_name = input("\nEnter the website name to fetch password : ").lower()
 				encfilesize = os.stat("null.txt.aes").st_size
@@ -70,7 +73,10 @@ while(True):
 					print("\nNo passwords found for this website name or you may enter wrong website name")
 				else:
 					print("\nPassword Fetched : ",fetch_pass)
-				os.remove("null.txt")			
+				os.remove("null.txt")
+                                print("press any key to exit")
+                                x = input()
+                                exit(1)			
 		else:
 			print("**********Incorrect password**********")
 		break
