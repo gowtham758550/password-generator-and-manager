@@ -16,6 +16,8 @@ This tool has an additional feature and it is Master password for access all oth
 
 If you are going to reset your machine don't worry about that just back up the files created by this tool. And restore the files in the same folder where the source code is then run the program it will run asusual. 
 
+NOTE: Don't use this program in high risky situations or for any sensitive purpose it is a student project and may contain bugs unknown to us. 
 
+DEVELOPERS NOT RESPONSIBLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.
 
 Thank you😁
