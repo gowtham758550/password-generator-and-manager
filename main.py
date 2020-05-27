@@ -7,6 +7,22 @@ import string
 import getpass
 import sys
 import subprocess
+import platform
+
+#To clear screen.
+def cls():
+  if platform.system().lower()=='windows':
+     x=os.system('cls')
+  else:
+     x=os.system('clear')
+
+#To check for internet connection.
+def check_internet():
+   if (os.system("ping google.com")!=0):
+        cls()
+        print(" \nInternet Connection is Not Available!\nPress any key to continue... ")
+        ch=input()
+        exit(1)
 
 #import pypi modules
 #check the modules are already installed
@@ -15,6 +31,7 @@ try:
 	import binascii
 #exception arises if modules are not installed
 except ImportError:
+	check_internet()
 	print("Requires modules are not found. Wait a minute for installation.\n")
 	#install the missing modules
 	#install pyAesCrpt
@@ -22,17 +39,9 @@ except ImportError:
 	#install binascii
 	subprocess.check_call([sys.executable, "-m", "pip", "install", "binascii"])
 	print("Installation completed :)\n")
-#finally execute after the installation even any exception arises or not
-finally:
-	#check again the modules or installed or not
-	try:
-		import pyAesCrypt
-		import binascii
-	#exception arises if there is no internet connection
-	except ImportError:
-		print("No internet connection!!!!!\n")
-		x = input("press any key to exit\n")
-		exit(1)
+	print('Restart the program to finish installation!\nPress any key to continue...')
+	x=input()
+	exit(1)
 		
 #buffer size for encryption and decryption
 buffer_size = 64*1024
