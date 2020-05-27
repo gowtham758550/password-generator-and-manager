@@ -18,11 +18,12 @@ def cls():
 
 #To check for internet connection.
 def check_internet():
-   if (os.system("ping google.com")!=0):
+  if (os.system("ping google.com")!=0):
         cls()
         print(" \nInternet Connection is Not Available!\nPress any key to continue... ")
         ch=input()
         exit(1)
+  cls()
 
 #import pypi modules
 #check the modules are already installed
