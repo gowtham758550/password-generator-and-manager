@@ -9,22 +9,6 @@ import sys
 import subprocess
 import platform
 
-#To clear screen.
-def cls():
-  if platform.system().lower()=='windows':
-     x=os.system('cls')
-  else:
-     x=os.system('clear')
-
-#To check for internet connection.
-def check_internet():
-  if (os.system("ping google.com")!=0):
-        cls()
-        print(" \nInternet Connection is Not Available!\nPress any key to continue... ")
-        ch=input()
-        exit(1)
-  cls()
-
 #import pypi modules
 #check the modules are already installed
 try:
@@ -32,7 +16,6 @@ try:
 	import binascii
 #exception arises if modules are not installed
 except ImportError:
-	check_internet()
 	print("Requires modules are not found. Wait a minute for installation.\n")
 	#install the missing modules
 	#install pyAesCrpt
