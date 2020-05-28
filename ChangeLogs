@@ -12,3 +12,8 @@ your master password.
 
 ->Added feature to automatically download third party modules from pypi to meet dependencies of this project.
 ->Some minor code cleaning.
+
+28/05/2020 version :0.0.4
+
+->Fixed critical issue of password manager exiting arbitrarily if not connected online.
+->Improved Error handling.
