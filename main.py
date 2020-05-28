@@ -1,4 +1,5 @@
-#Generate and manage your passwords
+#Password Generator and Manager version 0.0.4
+
 #import required modules
 import os
 import secrets
@@ -6,19 +7,7 @@ import re
 import string
 import getpass
 import sys
-import subprocess
 import platform
-import urllib.request
-
-
-#check internet connection
-def check_connection():
-	try:
-		urllib.request.urlopen("https://google.com")
-	except:
-		print("You have no active internet connection\n\n")
-		x = input("press enter to exit")
-		exit(1)
 
 #import pypi modules
 #check the modules are already installed
@@ -27,18 +16,22 @@ try:
 	import binascii
 #exception arises if modules are not installed
 except ImportError:
-	check_connection()
-	print("Requires modules are not found. Wait a minute for installation.\n")
+ print("\nRequired modules are not found. Wait a minute for installation.\n")
 	#install the missing modules
-	#install pyAesCrpt
-	subprocess.check_call([sys.executable, "-m", "pip", "install", "pyAesCrypt"])
-	#install binascii
-	subprocess.check_call([sys.executable, "-m", "pip", "install", "binascii"])
-	print("Installation completed :)\n")
-	print('Restart the program to finish installation!\nPress any key to continue...')
-	x=input()
-	exit(1)
-		
+ if platform.system().lower()=='windows':
+        x=os.system('py -m pip install pyAesCrypt')
+        os.system('py -m pip install binascii')
+ else:
+       x=os.system('python3 -m pip install pyAesCrypt')
+       os.system('python3 -m pip install binascii')
+       if (x!=0):
+        x=os.system('python -m pip install pyAesCrypt')
+        os.system('python -m pip install binascii')
+ if x!=0:    
+       print('\nInstallation Failed!')
+       x=input('\nPress any key to continue...')
+       exit(1)
+
 #buffer size for encryption and decryption
 buffer_size = 64*1024
 temp_str2 = ""
