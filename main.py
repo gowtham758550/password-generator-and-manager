@@ -24,25 +24,33 @@ import string
 import getpass
 import sys
 import platform
+import urllib.request
+import binascii
+
+#check internet connection
+def check_connection():
+	try:
+		urllib.request.urlopen("https://google.com")
+	except:
+		print("You have no active internet connection\n\n")
+		x = input("press enter to exit")
+		exit(1)
 
 #import pypi modules
 #check the modules are already installed
 try:
 	import pyAesCrypt
-	import binascii
 #exception arises if modules are not installed
 except ImportError:
  print("\nRequired modules are not found. Wait a minute for installation.\n")
+ check_connection()
 	#install the missing modules
  if platform.system().lower()=='windows':
         x=os.system('py -m pip install pyAesCrypt')
-        os.system('py -m pip install binascii')
  else:
        x=os.system('python3 -m pip install pyAesCrypt')
-       os.system('python3 -m pip install binascii')
        if (x!=0):
         x=os.system('python -m pip install pyAesCrypt')
-        os.system('python -m pip install binascii')
  if x!=0:    
        print('\nInstallation Failed!')
        x=input('\nPress any key to continue...')
