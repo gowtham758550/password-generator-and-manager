@@ -9,6 +9,11 @@ Python Modules required for this program:
   5. string
   6. re
   7. secrets
+  8. urllib.request
+  9. platform
+ 10. sys
+ 11. subprocess
+
 
 NOTE:Binascii and pyAesCrypt Modules will be automatically installed if not available.
 
