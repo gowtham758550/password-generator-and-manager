@@ -55,8 +55,10 @@ except ImportError:
        print('\nInstallation Failed!')
        x=input('\nPress any key to continue...')
        exit(1)
-finally:
-	import pyAesCrypt
+ print("Installation completed :)\n")
+ print('Restart the program to finish installation!\nPress any key to continue...')
+ x=input()
+ exit(1)
 
 #buffer size for encryption and decryption
 buffer_size = 64*1024
