@@ -1,4 +1,4 @@
-#Password Generator and Manager version 0.0.4
+#Password Generator and Manager version 0.0.4.1
 
 # Copyright (c) Gowtham 2019-2020
 # Copyright (C) 2018-2020 M.Anish <aneesh25861@gmail.com>
