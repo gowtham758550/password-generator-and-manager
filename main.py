@@ -1,4 +1,4 @@
-#Password Generator and Manager version 0.0.4.1
+#Password Generator and Manager version 0.0.4.2
 
 # Copyright (c) Gowtham 2019-2020
 # Copyright (C) 2018-2020 M.Anish <aneesh25861@gmail.com>
@@ -144,9 +144,10 @@ def fetch_master_password():
 		for i in file:
 			temp_str2 += i
 	file.close()
+	
+	#Delete temporary text File
+	os.remove('temp.txt')
 	return temp_str2
-	#delete the temp text file
-	os.remove("temp.txt")
 	
 
 #check you have already created a password for this website
