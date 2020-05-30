@@ -17,3 +17,8 @@ your master password.
 
 ->Fixed critical issue of password manager exiting arbitrarily if not connected online.
 ->Improved Error handling.
+
+30/05/2020 version : 0.0.4.2
+
+->Fixed Master Password Exposure
+->some minor code cleaning.
