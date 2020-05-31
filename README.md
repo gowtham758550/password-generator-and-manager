@@ -12,6 +12,9 @@ Python Modules required for this program:
   8. urllib.request
   9. platform
  10. sys
+ 11. subprocess
+ 12. time
+ 13. hashlib
 
 
 NOTE:Binascii and pyAesCrypt Modules will be automatically installed if not available.
