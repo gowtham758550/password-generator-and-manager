@@ -17,7 +17,7 @@ Python Modules required for this program:
  13. hashlib
 
 
-NOTE:Binascii and pyAesCrypt Modules will be automatically installed if not available.
+NOTE:pyAesCrypt Module will be automatically installed if not available.
 
 This python program creates password and stores it in encrypted file and the file cannot opened by any editor. 
 
