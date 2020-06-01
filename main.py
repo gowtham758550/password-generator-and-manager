@@ -28,7 +28,6 @@ import urllib.request
 import binascii
 import hashlib
 import time
-import subprocess
 
 #check internet connection
 def check_connection():
@@ -179,7 +178,7 @@ def fetch_master_password():
 #clear screen
 def clear_screen():
 	x = input("\n\nPress enter to continue")
-	subprocess.call('clear' if os.name == 'posix' else 'cls')
+	os.system('clear' if os.name == 'posix' else 'cls')
 									
 
 
