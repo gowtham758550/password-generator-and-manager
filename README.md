@@ -7,14 +7,12 @@ Python Modules required for this program:
   3. os
   4. binascii   
   5. string
-  6. re
-  7. secrets
-  8. urllib.request
-  9. platform
- 10. sys
- 11. time
- 12. hashlib
-
+  6. secrets
+  7. urllib
+  8. platform
+  9. sys
+ 10. time
+ 11. hashlib
 
 NOTE:pyAesCrypt Module will be automatically installed if not available.
 
