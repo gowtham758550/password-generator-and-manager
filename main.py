@@ -1,8 +1,8 @@
 #Password Generator and Manager version 0.0.4.1
 
 # Copyright (c) S.Gowtham 2019-2020 <gowtham758550@gmail.com>
-# Copyright (C) 2018-2020 M.Anish <aneesh25861@gmail.com>
-# Copyright (C) T.Raagul
+# Copyright (C) M.Anish 2019-2020 <aneesh25861@gmail.com>
+# Copyright (C) T.Raagul 2019-2020
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
