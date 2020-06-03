@@ -14,5 +14,5 @@ def randompassword():
 
 
 
-with open("C:\password.txt","a") as file:
+with open("password.txt","a") as file:
 	file.write("\n\n"+str(datetime.now().strftime("%B-%d-%y\t%H-%M-%S"))+"\nPassword : "+randompassword()+"\nWebsite : "+input()+"\nId : "+input())
