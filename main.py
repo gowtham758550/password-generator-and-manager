@@ -19,7 +19,6 @@
 #import required modules
 import os
 import secrets
-import re
 import string
 import getpass
 import sys
@@ -258,7 +257,7 @@ while(True):
 							#check line by line
 							for line in file.readlines():
 								#match the pattern that we stored in the file
-								if re.search(rf"{website_name}*", line, re.I):
+								if website_name in line:
 									#if the pattern matches then we strip the website name and store the password
 									temp_str3 = line.strip(website_name)
 						file.close()
