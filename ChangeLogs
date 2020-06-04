@@ -20,7 +20,12 @@ your master password.
 
 31/05/2020 version : 0.0.4.2
 
-->Fixed Master Password Exposure
+->Fixed Master Password Exposure.
 ->some minor code cleaning.
-->Add sha256 hash to check integrity
+->Add sha256 hash to check integrity.
 
+04/06/2020 version : 0.0.5
+
+->Create only one password for a website no duplicate passwords.
+->Add hash to website names to avoid some password mismatch for similar website names.
+->Generated passwords are now in a structure that satisfy website requirements and difficult to bruteforce the password.
