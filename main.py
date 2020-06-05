@@ -174,7 +174,7 @@ def generate_password(no):
 		print("\n\nPassword generated : ",end = "")
 		anime(password)
 	else:
-		for i in range(q):
+		for i in range(rem):
 			password += secrets.choice(a1+a2+a3+a4)
 		print("\n\nPassword generated : ",end = "")
 		anime(password)
