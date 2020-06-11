@@ -26,6 +26,6 @@ NOTE: Don't use this program in high risky situations or for any sensitive purpo
 
 DEVELOPERS NOT RESPONSIBLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.
 
-To use the gui version of this tool [click here](https://github.com/gowtham758550/password-generator-and-manager)
+To use the gui version of this tool [click here](https://github.com/Raagul26/Password-manager-GUI)
 
 Thank you😁
