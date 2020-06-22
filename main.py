@@ -34,7 +34,7 @@ import time
 #clear screen
 def clear_screen():
 	x = input("\n\nPress enter to continue")
-	os.system('clear' if os.name == 'posix' else 'cls')
+	os.system('clear' or 'cls')
 	
 	
 #check internet connection
