@@ -29,3 +29,9 @@ your master password.
 ->Create only one password for a website no duplicate passwords.
 ->Add hash to website names to avoid some password mismatch for similar website names.
 ->Generated passwords are now in a structure that satisfy website requirements and difficult to bruteforce the password.
+
+18/07/2020 version : 2.0
+
+->Finished pysecret Integration
+->Added patches to make password recovery harder.
+->Fixed Bug which caused crashes due to corrupt encrypted files
