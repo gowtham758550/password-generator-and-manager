@@ -181,7 +181,7 @@ def create_master_password():
     if password1 == password2:
         hash = sha256_hash_msg(password1)
 	#open the file to store new master password
-        with open("mp.txt", "a") as file:
+        with open("mp.txt", "w") as file:
           file.write(hash)
           file.close()
         global temp_str2
@@ -344,8 +344,8 @@ while(True):
 		#then check the password is right or wrong
 		if temp_str2 == hash:
 			while(True):
-				print("\n\n1. Generate password\n2. Fetch Password\n3. Exit\n\n")
-				choice = input("Enter your choice(1,2,3) : ")
+				print("\n\n[1] Generate password\n[2] Fetch Password\n[3] Change master password\n[4] Exit\n\n")
+				choice = input("Enter your choice(1,2,3,4) : ")
 				#Generate password
 				if choice == '1':
 					print("\n\n*note : website name is important and you can fetch the password with website name only")
@@ -398,9 +398,21 @@ while(True):
 						print("\n\nNo passwords are created yet (ᗒᗣᗕ)")
 						clear_screen()
 						
-			
+				elif choice =="3":
+					old = getpass.getpass("Enter old password : ")
+					if os.path.isfile("mp.txt.aes"):
+							decrypt_file("mp.txt.aes", en(old))
+							fetch_master_password()
+							if temp_str2 == sha256_hash_msg(old):
+								create_master_password()
+								os.remove("mp.txt.aes")
+								encrypt_file("mp.txt", en(temp_str2))
+								print("\n\nMaster password is created succesfully (•̀ᴗ•́)")
+								clear_screen()
+
+					clear_screen()
 				#Exit 
-				elif choice == '3':
+				elif choice == '4':
 					exit(1)
 					
 				#any other choices
@@ -432,8 +444,5 @@ while(True):
 
                 #uses password key derviation algorithm designed by Anish M
 		encrypt_file("mp.txt", en(temp_str2))
-
 		print("\n\nMaster password is created succesfully (•̀ᴗ•́)")
 		clear_screen()
-		
-		
