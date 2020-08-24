@@ -35,3 +35,7 @@ your master password.
 ->Finished pysecret Integration
 ->Added patches to make password recovery harder.
 ->Fixed Bug which caused crashes due to corrupt encrypted files
+
+23/08/2020 version : 2.1
+
+->Feature to change master password. 
