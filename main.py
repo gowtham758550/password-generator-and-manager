@@ -30,7 +30,7 @@ import hashlib
 import time
 
 
-
+os.system("clear" or "cls")
 #clear screen
 def clear_screen():
 	x = input("\n\nPress enter to continue")
@@ -200,24 +200,6 @@ def sha256_hash_msg(str):
 	
 def md5_hash_msg(str):
 	return hashlib.md5(str.encode('utf-8')).hexdigest()		   
-			
-			
-#Function to fetch the key for decryption
-def get_key():
-	#temporary string variable to get a key
-	temp_str1 = ""
-	#opens the key text file as key_file
-	try:
-		with open("key.txt", "r") as key_file:
-			for i in key_file:
-				#concatenate everything in the key file to the temp_str1
-				temp_str1 += i
-		key_file.close()
-	except:
-		print("\n\nKey file not found!!!!!!")
-		exit(1)
-	#returns the key
-	return str(temp_str1)
 
 
 #function to encrypt the file
@@ -335,8 +317,6 @@ while(True):
 	if os.path.isfile("mp.txt.aes"):
 		master_password = getpass.getpass("\n\nEnter your password : ")
 		hash = sha256_hash_msg(master_password)
-		#get_key function returns the key for decryption
-		key = get_key()
 		#call decrypt_file() function 
 		decrypt_file("mp.txt.aes",en(master_password))
 		#call the function to read password from temp file
