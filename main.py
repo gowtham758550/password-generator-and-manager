@@ -170,14 +170,14 @@ def anime(msg):
 def create_master_password():
   while(True):
     while(True):
-      password1 = getpass.getpass("\n\nCreate your master password\n Enter password : ")
+      password1 = getpass.getpass("\nCreate your master password\nEnter password : ")
       if len(password1) > 7:
         break
       else:
-        print("\n\nWarning!!!!!!!!!!!!!!")
+        print("\nWarning!!!!!!!!!!!!!!")
         print("Master password requires minimum 8 characters")
-        x = input("\n\nPress enter to create again")
-    password2 = getpass.getpass("\nConfirm password : ")
+        x = input("\nPress enter to create again")
+    password2 = getpass.getpass("Confirm password : ")
     if password1 == password2:
         hash = sha256_hash_msg(password1)
 	#open the file to store new master password
@@ -188,9 +188,9 @@ def create_master_password():
         temp_str2=password1
         break
     else:
-         print("\n\nWarning!!!!!!!!!!!!!!!")
+         print("\nWarning!!!!!!!!!!!!!!!")
          print("Passwords are not matching (ᗒᗣᗕ)՞")
-         x = input("\n\nPress enter to create again")
+         x = input("\nPress enter to create again")
 
 
 
@@ -249,12 +249,12 @@ def generate_password(no):
 		password += secrets.choice(list[2])
 		password += secrets.choice(list[3])
 	if rem == 0:
-		print("\n\nPassword generated : ",end = "")
+		print("\nPassword generated : ",end = "")
 		anime(password)
 	else:
 		for i in range(rem):
 			password += secrets.choice(a1+a2+a3+a4)
-		print("\n\nPassword generated : ",end = "")
+		print("\nPassword generated : ",end = "")
 		anime(password)
 
 #id = 1 for fetch passwords
@@ -292,13 +292,13 @@ def get_character():
 	while(True):
 		try:
 			global character
-			character = int(input("\n\nEnter no of characters for your password : "))
+			character = int(input("Enter no of characters for your password : "))
 			if character>5:
 				break
 			else:
-				print("\n\nPassword requires minimum 6 charactersʕ•ᴥ•ʔ")
+				print("\nPassword requires minimum 6 charactersʕ•ᴥ•ʔ")
 		except:
-			print("\n\nNo of character must be a numerical value ಠ_ಠ")
+			print("\nNo of character must be a numerical value ಠ_ಠ")
 
 
 while(True):
@@ -315,7 +315,7 @@ while(True):
 	
 	
 	if os.path.isfile("mp.txt.aes"):
-		master_password = getpass.getpass("\n\nEnter your password : ")
+		master_password = getpass.getpass("\nEnter your password : ")
 		hash = sha256_hash_msg(master_password)
 		#call decrypt_file() function 
 		decrypt_file("mp.txt.aes",en(master_password))
@@ -328,14 +328,14 @@ while(True):
 				choice = input("Enter your choice(1,2,3,4) : ")
 				#Generate password
 				if choice == '1':
-					print("\n\n*note : website name is important and you can fetch the password with website name only")
+					print("*note : website name is important and you can fetch the password with website name only")
 					#ask user input for website name
-					website_name = input("\n\nEnter website name : ").lower()
+					website_name = input("\nEnter website name : ").lower()
 					hash = md5_hash_msg(website_name)
 					if os.path.isfile('secret.txt.aes'):
 						decrypt_file('secret.txt.aes',en(master_password))
 						if check_file(hash,1):
-							print("\n\nYou already create a password for this website(ᗒᗣᗕ)՞")
+							print("\nYou already create a password for this website(ᗒᗣᗕ)՞")
 							os.remove("temp.txt")
 						else:
 							get_character()
@@ -360,7 +360,7 @@ while(True):
 				
 				#Fetch password	
 				elif choice == '2':
-					website_name = input("\n\nEnter website name to fetch password : ").lower()
+					website_name = input("Enter website name to fetch password : ").lower()
 					hash = md5_hash_msg(website_name)
 					if os.path.isfile("secret.txt.aes"):
 						#call the function to decrypt the file containing passwords
@@ -368,14 +368,14 @@ while(True):
 						password = check_file(hash,2)
 						os.remove("temp.txt")
 						if password == None:
-							print("\n\nNo passwords created for this website")
+							print("\nNo passwords created for this website")
 							clear_screen()
 						else:
-							print("\n\nFetched passwords : ",end = "")
+							print("\nFetched password : ",end = "")
 							anime(str(password))
 							clear_screen()
 					else:
-						print("\n\nNo passwords are created yet (ᗒᗣᗕ)")
+						print("\nNo passwords are created yet (ᗒᗣᗕ)")
 						clear_screen()
 						
 				elif choice =="3":
@@ -384,25 +384,25 @@ while(True):
 							decrypt_file("mp.txt.aes", en(old))
 							fetch_master_password()
 							if temp_str2 == sha256_hash_msg(old):
+								decrypt_file("secret.txt.aes", en(old))
 								create_master_password()
 								os.remove("mp.txt.aes")
 								encrypt_file("mp.txt", en(temp_str2))
-								print("\n\nMaster password is created succesfully (•̀ᴗ•́)")
-								clear_screen()
-
-					clear_screen()
+								os.rename("temp.txt", "secret.txt")
+								encrypt_file("secret.txt", en(temp_str2))
+								print("\nMaster password is changed succesfully (•̀ᴗ•́)\n\nRelaunch the tool..,")
+								exit(1)
 				#Exit 
 				elif choice == '4':
 					exit(1)
 					
 				#any other choices
 				else:
-					print("\n\nEnter correct choice ಠ_ಠ ")
+					print("\nEnter correct choice ಠ_ಠ ")
 					clear_screen()
 		
 		#incorrect password					
 		else:
-
 			break
 		
 	#file not found
@@ -422,7 +422,7 @@ while(True):
 		file.close()
 		#now encrypt the master password file
 
-                #uses password key derviation algorithm designed by Anish M
+         #uses password key derviation algorithm designed by Anish M
 		encrypt_file("mp.txt", en(temp_str2))
-		print("\n\nMaster password is created succesfully (•̀ᴗ•́)")
+		print("\nMaster password is created succesfully (•̀ᴗ•́)")
 		clear_screen()
