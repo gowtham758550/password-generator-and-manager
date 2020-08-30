@@ -30,11 +30,11 @@ import hashlib
 import time
 
 
-os.system("clear" or "cls")
+os.system("clear" if os.name!='nt' else "cls")
 #clear screen
 def clear_screen():
 	x = input("\n\nPress enter to continue")
-	os.system('clear' or 'cls')
+	os.system("clear" if os.name!='nt' else "cls")
 	
 	
 #check internet connection
