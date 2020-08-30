@@ -1,4 +1,4 @@
-#Password Generator and Manager version 2.0
+#Password Generator and Manager version 2.1
 
 # Copyright (C) Gowtham 2019-2020 <gowtham758550@gmail.com>
 # Copyright (C) 2019-2020 M.Anish <aneesh25861@gmail.com>
@@ -34,7 +34,7 @@ os.system("clear" if os.name!='nt' else "cls")
 #clear screen
 def clear_screen():
 	x = input("\n\nPress enter to continue")
-	os.system("clear" if os.name!='nt' else "cls")
+	os.system('clear' if os.name!='nt' else 'cls')
 	
 	
 #check internet connection
@@ -300,7 +300,32 @@ def get_character():
 		except:
 			print("\nNo of character must be a numerical value ಠ_ಠ")
 
+def zipper():
+	try:
+		from zipfile import ZipFile
+		print("""\nFollowing files will zipped
+		> master.txt.aes
+		> key.txt
+		> secret.txt.aes""")
+		with ZipFile("Password_Backup.zip", "w") as zip:
+			zip.write("mp.txt.aes")
+			zip.write("key.txt")
+			zip.write("secret.txt.aes")
+		print("Files backup completed ")
+	except FileNotFoundError:
+		print('\nRequired files are missing')
 
+def datetime(timestamp):
+	from datetime import datetime
+	return datetime.fromtimestamp(int(timestamp))
+	
+def metadata(file):
+	try:
+		print("> {}\n\tFile modified time :{}".format(file, datetime(os.path.getmtime(file))))
+		
+	except FileNotFoundError:
+		print("\nRequired files are missing")
+	
 while(True):
 	try:
 		print("GENERATE AND MANAGE".center(os.get_terminal_size().columns))
@@ -324,8 +349,8 @@ while(True):
 		#then check the password is right or wrong
 		if temp_str2 == hash:
 			while(True):
-				print("\n\n[1] Generate password\n[2] Fetch Password\n[3] Change master password\n[4] Exit\n\n")
-				choice = input("Enter your choice(1,2,3,4) : ")
+				print("\n\n[1] Generate password\n[2] Fetch Password\n[3] Change master password\n[4] Backup Passwords\n[5] Metadata\n[6] Exit\n\n")
+				choice = input("Enter your choice(1,2,3,4,5,6) : ")
 				#Generate password
 				if choice == '1':
 					print("*note : website name is important and you can fetch the password with website name only")
@@ -371,7 +396,7 @@ while(True):
 							print("\nNo passwords created for this website")
 							clear_screen()
 						else:
-							print("\nFetched password : ",end = "")
+							print("Fetched passwords : ",end = "")
 							anime(str(password))
 							clear_screen()
 					else:
@@ -392,8 +417,26 @@ while(True):
 								encrypt_file("secret.txt", en(temp_str2))
 								print("\nMaster password is changed succesfully (•̀ᴗ•́)\n\nRelaunch the tool..,")
 								exit(1)
-				#Exit 
+				
 				elif choice == '4':
+					print("Password stored encrypted file including master password and key files are zipped in the same folder. So you can access the passwords with your password at anywhere with our tool")
+					if os.path.isfile("secret.txt.aes"):
+						zipper()
+						
+					else:
+						print("\nlol There is no passworda created to take backup")
+					clear_screen()
+					
+				elif  choice == '5':
+					if os.path.isfile("secret.txt.aes"):
+						metadata("secret.txt.aes")
+					metadata("mp.txt.aes")
+					metadata("key.txt")
+					clear_screen()
+					
+					
+				#Exit 
+				elif choice == '6':
 					exit(1)
 					
 				#any other choices
