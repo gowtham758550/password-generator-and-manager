@@ -39,3 +39,8 @@ your master password.
 23/08/2020 version : 2.1
 
 ->Feature to change master password. 
+
+30/08/2020 version : 2.2
+
+->Safe backup for your passwords with same master password as a zip file
+->Find last modified time of all password files
