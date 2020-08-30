@@ -1,34 +1,47 @@
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/gowtham758550/password-generator-and-manager/graphs/contributors) 
+# Password Manager
 
+<p align = "center" >A simple multi platform support Password Manager using python. <p>
 
-# password-generator
-A simple password generator using python.
+### Requirements 🧐 
+<p>We use pyAesCrypt third party module for encryption and decryption don't worry about the manual installation our tool will automatically install the module when you run in your machine if not available. <p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-144522%7E2.png" >
 
-Python Modules required for this program:
-  1. pyAesCrypt 
-  2. getpass
-  3. os
-  4. binascii   
-  5. string
-  6. secrets
-  7. urllib
-  8. platform
-  9. sys
- 10. time
- 11. hashlib
+### Usage
+```sh
+$ python3 main.py
+```
+<p>You need to create a master password </p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140452%7E2.png" >
 
-NOTE:pyAesCrypt Module will be automatically installed if not available.
+### Generate password
+<p>To generate password you need to give the website name and no of characters for your password<p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140602%7E2.png" >
 
-This python program creates password and stores it in encrypted file and the file cannot opened by any editor. 
+### Fetch password
+<p>You can fetch all generated passwords only with website name. Website name is not case sensitive so, don't worry. </p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140626%7E2.png" >
 
-This tool has an additional feature and it is Master password for access all other password. The master password also stores in a encrypted file when you created a master password. Once the file is created you can generate and fetch passwords.
+### Change master password
+<p>When you change the master password password stored files will be reencrypted using your new master password. </p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140656%7E2.png" >
 
-If you are going to reset your machine don't worry about that just back up the files created by this tool. And restore the files in the same folder where the source code is then run the program it will run asusual. 
+### Backup passwords
+<p>All your password stored files, master password file, and key will be stored in a same folder as a zip file. So, you can use this files to fetch passwords with your master password at any machine. </p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140721%7E3.png" >
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140736%7E2.png" >
 
-NOTE: Don't use this program in high risky situations or for any sensitive purpose it is a student project and may contain bugs unknown to us. 
+### Metadata
+<p>You can find the file last modified time using this feature. </p>
+<img src="https://github.com/gowtham758550/password-generator-and-manager/blob/master/screenshots/Screenshot_20200830-140755%7E2.png" >
 
-DEVELOPERS NOT RESPONSIBLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.
+### Note
+<p>Don't use this program in high risky situations or for any sensitive purpose it is a student project and may contain bugs unknown to us.<br>
+DEVELOPERS NOT RESPONSIBLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.</p>
 
-To use the gui version of this tool [click here](https://github.com/Raagul26/Password-manager-GUI)
+### Contributors 
+* ![Gowtham](https://github.com/gowtham758550/) 
+* ![Anish](https://github.com/Anish-M-code/) 
+* ![Raagul](https://github.com/Raagul26/) 
 
-Thank you😁
+We also working on GUI. Find ![here](https://github.com/Raagul26/Password-manager-GUI)
+
