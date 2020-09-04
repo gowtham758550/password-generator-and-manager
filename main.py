@@ -140,7 +140,7 @@ def ikey(x):
 def en(msg):
     ciphertxt=[]
     x=f(msg)
-    y=ikey(msg)
+    y=f(ikey(msg))
     if len(x)<=len(y):
         for i in range(len(x)):
             if type(x[i])==int and type(y[i])==int:
