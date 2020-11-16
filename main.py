@@ -140,7 +140,7 @@ def en(msg):
     y=f(ikey(msg))
     if len(x)<=len(y):
         for i in range(len(x)):
-            if type(x[i])==int and type(y[i])==int:
+            if type(x[i]) is int and type(y[i]) is int:
                 ciphertxt.append(((x[i]+y[i])%36))
             else:
                 ciphertxt.append(' ')
