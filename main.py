@@ -44,7 +44,7 @@ def check_connection():
 	except:
 		print("You have no active internet connection\n\nIf you get no active internet even when you connected to internet please try to install the module manually\nModule is pyAesCrypt\nSorry for this inconvinience")
 		x = input("press enter to exit")
-		exit(1)
+		sys.exit(1)
 
 #import pypi modules
 #check the modules are already installed
@@ -64,11 +64,11 @@ except ImportError:
  if x!=0:    
        print('\nInstallation Failed!')
        x=input('\nPress any key to continue...')
-       exit(1)
+       sys.exit(1)
  print("Installation completed :)\n")
  print('Restart the program to finish installation!\nPress any key to continue...')
  x=input()
- exit(1)
+ sys.exit(1)
 
 #buffer size for encryption and decryption
 buffer_size = 64*1024
@@ -146,7 +146,7 @@ def en(msg):
                 ciphertxt.append(' ')
     else:
         x=input('Press any key to continue...')
-        exit(1)
+        sys.exit(1)
     ciphertxt=tuple(ciphertxt)
     ctxt=rf(ciphertxt)
     shk=rf(y)
@@ -413,7 +413,7 @@ while(True):
 								os.rename("temp.txt", "secret.txt")
 								encrypt_file("secret.txt", en(temp_str2))
 								print("\nMaster password is changed succesfully (•̀ᴗ•́)\n\nRelaunch the tool..,")
-								exit(1)
+								sys.exit(1)
 				
 				elif choice == '4':
 					print("Password stored encrypted file including master password and key files are zipped in the same folder. So you can access the passwords with your password at anywhere with our tool")
@@ -434,7 +434,7 @@ while(True):
 					
 				#Exit 
 				elif choice == '6':
-					exit(1)
+					sys.exit(1)
 					
 				#any other choices
 				else:
