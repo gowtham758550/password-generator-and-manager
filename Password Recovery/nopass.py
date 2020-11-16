@@ -17,13 +17,8 @@
 
 #import required modules
 import os
-import secrets
-import re
-import string
-import getpass
 import sys
 import platform
-import binascii
 
 #check internet connection
 def check_connection():
