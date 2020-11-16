@@ -32,7 +32,7 @@ def check_connection():
 	except:
 		print("You have no active internet connection\n\n")
 		x = input("press enter to exit")
-		exit(1)
+		sys.exit(1)
 
 #import pypi modules
 #check the modules are already installed
@@ -52,11 +52,11 @@ except ImportError:
  if x!=0:    
        print('\nInstallation Failed!')
        x=input('\nPress any key to continue...')
-       exit(1)
+       sys.exit(1)
  print("Installation completed :)\n")
  print('Restart the program to finish installation!\nPress any key to continue...')
  x=input()
- exit(1)
+ sys.exit(1)
 
 
 #buffer size for encryption and decryption
