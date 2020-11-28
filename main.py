@@ -75,9 +75,9 @@ buffer_size = 64*1024
 temp_str2 = ""
 password=''
 
-### Beginning of Pysecret Functions ###
+### Beginning of Share_Secret Functions ###
 
-''' These Functions are used from pysecret project https://github.com/anish-m-code/pysecret
+''' These Functions are used from share_secret project https://github.com/anish-m-code/share_secret
 
 # Copyright (C) 2018-2020 M.Anish <aneesh25861@gmail.com>
 #
@@ -152,7 +152,7 @@ def en(msg):
     shk=rf(y)
     return ctxt
 
-### End of Pysecret Functions ###
+### End of Share_Secret Functions ###
 
 
 #anime the print to make attention for some alert message
