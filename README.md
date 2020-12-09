@@ -45,3 +45,6 @@ DEVELOPERS NOT RESPONSIBLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.</p
 
 We also working on GUI. Find ![here](https://github.com/Raagul26/Password-manager-GUI)
 
+### Support us with some 💸
+* [Buy me a coffee](https://www.buymeacoffee.com/gowtham758550) 
+
