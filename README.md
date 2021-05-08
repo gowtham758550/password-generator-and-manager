@@ -39,11 +39,11 @@ $ python3 main.py
 DEVELOPERS NOT RESPONSIBLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.</p>
 
 ### Contributors 
-* ![Gowtham](https://github.com/gowtham758550/) 
-* ![Anish](https://github.com/Anish-M-code/) 
-* ![Raagul](https://github.com/Raagul26/) 
+* [Gowtham](https://github.com/gowtham758550/) 
+* [Anish](https://github.com/Anish-M-code/) 
+* [Raagul](https://github.com/Raagul26/) 
 
-We also working on GUI. Find ![here](https://github.com/Raagul26/Password-manager-GUI)
+We also working on GUI. Find [here](https://github.com/Raagul26/Password-manager-GUI)
 
 ### Support us with some 💸
 * [Buy me a coffee](https://www.buymeacoffee.com/gowtham758550) 
