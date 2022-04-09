@@ -1,6 +1,11 @@
 # Password Manager
 
 <p align = "center" >A simple multi platform support Password Manager using python. <p>
+  
+### About this Project
+This is a downstream version of https://github.com/gowtham758550/password-generator-and-manager.
+It is no way related to original project but gets benefit of upstream development.
+This project was developed to secure supply chain and develop custom versions of upstream software.
 
 ### Requirements 🧐 
 <p>We use pyAesCrypt third party module for encryption and decryption don't worry about the manual installation our tool will automatically install the module when you run in your machine if not available. <p>
